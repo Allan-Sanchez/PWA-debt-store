@@ -1,6 +1,6 @@
 <template>
   <section>
-    <div class="flex items-center flex-col card-image py-4 rounded-lg">
+    <div class="flex items-center flex-col card-image py-4 ">
       <!-- <div> -->
       <img src="../assets/img/boy.svg" class="w-24" alt="avatar image" />
       <!-- </div> -->
@@ -11,7 +11,7 @@
 
       <div class="flex w-11/12 justify-around absolute icon-content">
         <button
-          class="btn-border-icon  bg-pink-500 text-white w-12 h-12 rounded-lg  hover:bg-pink-400 border border-solid "
+          class="btn-border-icon  bg-pink-500 text-white w-12 h-12   hover:bg-pink-400 border border-solid "
         >
           <div class="ml-2">
             <svg
@@ -31,7 +31,7 @@
           </div>
         </button>
         <button
-          class="btn-border-icon border border-solid modal-close bg-blue-500 w-12 h-12 rounded-lg  hover:bg-blue-400 flex justify-center items-center"
+          class="btn-border-icon border border-solid modal-close bg-blue-500 w-12 h-12  hover:bg-blue-400 flex justify-center items-center"
         >
           <div class="ml-2">
             <svg
@@ -53,8 +53,14 @@
       </div>
     </div>
 
+    <div class="w-3/4 flex justify-center mx-auto text-font-card">
+      <div class=" w-48 mt-5 p-3 border p-1 bg-blue-100 rounded-2">
+        <p>Total Deuda <span class="font-bold">5,000.00</span></p>
+      </div>
+    </div>
+
     <!-- table -->
-    <div class="inline-block min-w-full shadow rounded-lg overflow-hidden mt-5 text-font-card" >
+    <div class="inline-block min-w-full shadow overflow-hidden mt-5 text-font-card" >
       <table class="min-w-3/4 leading-normal mx-auto  mb-5">
         <thead>
           <tr>
@@ -333,6 +339,8 @@
         </div>
       </div>
     </div>
+
+    
 
     <!-- btn -->
      <div class="flex justify-center pt-2 mt-4 text-font-card mb-5">

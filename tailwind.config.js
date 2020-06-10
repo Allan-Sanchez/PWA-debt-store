@@ -14,11 +14,25 @@ module.exports = {
          '3/4': '75%',
          'full': '100%',
     },
-    extends:{
-
+  
+    extend:{
       width: {
         '14':'50px'
-      }
+      },
+      borderRadius:{
+        'rounded-0':'0',
+        'rounded-1':'10px',
+        
+        'rounded-3':'30px',
+        'rounded-4':'40px',
+        'rounded-5':'50px',
+        'rounded-6':'60px',
+        'rounded-7':'70px',
+        'rounded-8':'80px',
+        'rounded-9':'90px',
+        'rounded-10':'100px',
+      },
+      
     }
   },
   variants: {},
