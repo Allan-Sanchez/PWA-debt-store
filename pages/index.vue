@@ -1,40 +1,35 @@
 <template>
-  <div class="container">
-    <div>
-      <logo />
-      <h1 class="title">
-        pwa-bag
-      </h1>
-      <h2 class="subtitle">
-        My stupendous Nuxt.js project
-      </h2>
-      <div class="links">
-        <a
-          href="https://nuxtjs.org/"
-          target="_blank"
-          class="button--green"
-        >
-          Documentation
-        </a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          class="button--grey"
-        >
-          GitHub
-        </a>
+  <section>
+    <div class="w-full h-64 flex justify-center items-center">
+      <div class="flex justify-center flex-col w-full mx-12">
+        <h1 class="title text-center">UK</h1>
+        <div class="relative">
+          <input
+            class="input-search"
+            type="text"
+            placeholder="Buscar por nombre"
+          />
+        </div>
       </div>
     </div>
-  </div>
+
+    <div class="mx-6 text-font">
+      <h3 class="mb-3">Lista de Personas</h3>
+      <CARDLIST></CARDLIST>
+    </div>
+
+  </section>
 </template>
 
 <script>
-import Logo from '~/components/Logo.vue'
-
+import CARDLIST from '@/components/CardList';    
 export default {
-  components: {
-    Logo
-  }
+  
+  components:{
+    CARDLIST,
+    // MODALADD
+  },
+  
 }
 </script>
 
@@ -42,36 +37,36 @@ export default {
 /* Sample `apply` at-rules with Tailwind CSS
 .container {
   @apply min-h-screen flex justify-center items-center text-center mx-auto;
-}
-*/
-.container {
-  margin: 0 auto;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+} */
+
+:root {
+  --color-text: #2c3550;
 }
 
 .title {
-  font-family: 'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
-    'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-  display: block;
-  font-weight: 300;
-  font-size: 100px;
-  color: #35495e;
-  letter-spacing: 1px;
+  font-family: 'Piedra', sans-serif;
+  font-size:64px;
+  color: var(--color-text);
 }
-
-.subtitle {
-  font-weight: 300;
-  font-size: 42px;
-  color: #526488;
-  word-spacing: 5px;
-  padding-bottom: 15px;
+.text-font {
+  font-family: 'Roboto';
+  color: var(--color-text);
 }
+.input-search {
+  @apply border  py-2 px-4 block w-full appearance-none leading-normal;
+  font-family: 'Roboto';
+  border-radius:2rem;
+  border-color: #e4e9f8;
+  background: #f4f6fd;
+}
+.input-search:focus {
+  @apply outline-none shadow-outline;
+}
+.input-search::placeholder {
+  color: var(--color-text);
+}
+.placeholder-input::placeholder{
+    color: var(--color-text);
 
-.links {
-  padding-top: 15px;
 }
 </style>
